@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+  
+  
+    <struts>  
+        <package name="struts2" extends="struts-default">  
+	        
+	        <action name="List" class="org.zhou.view.BookAction" method="list">
+	            <result>List.jsp</result>
+	        </action>
+	        
+	        <action name="Search" class="org.zhou.view.AuthorAction" method="showBooks">
+	            <result>ShowBooks.jsp</result>
+	        </action>
+	        
+	        <action name="Show" class="org.zhou.view.BookAction" method="load">
+	            <result>Showall.jsp</result>
+	        </action>
+	        
+	        <action name="Remove" class="org.zhou.view.BookAction" method="remove">
+	            <result type="redirect">List.action</result>
+	        </action>	
+	                
+	        <action name="Add">
+	            <result>Add.jsp</result>
+	        </action>
+	        
+	        <action name="Ret">
+	           <result type="redirect">List.action</result>
+	        </action>
+	        
+	        <action name="Update" class="org.zhou.view.BookAction" method="load">
+	            <result>Update.jsp</result>
+	        </action>
+	        
+	        <action name="Change" class="org.zhou.view.BookAction" method="change">
+	            <result type="redirect">List.action</result>
+	        </action>
+	        
+	        <action name="Store" class="org.zhou.view.BookAction" method="store">
+	            <result type="redirect">List.action</result>
+	        </action>
+	        
+	        
+        </package>  
+    </struts>  
